@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>document.documentElement.classList.add('js');</script>
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
 
     <?php
-        $pageTitle       = $title ?? 'Rizki Dwi Setyanto — Creative Developer';
-        $pageDescription = $description ?? 'Creative Developer from Indonesia. Software, design, and brand identity — built with intention.';
+    $pageTitle       = $title ?? 'Rizki Dwi Setyanto — Creative Developer';
+    $pageDescription = $description ?? 'Creative Developer from Indonesia. Software, design, and brand identity — built with intention.';
     ?>
     <title><?= esc($pageTitle) ?></title>
     <meta name="description" content="<?= esc($pageDescription) ?>">
@@ -25,11 +28,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://api.fontshare.com">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>">
 </head>
+
 <body>
 
     <a class="skip-link" href="#main">Skip to content</a>
