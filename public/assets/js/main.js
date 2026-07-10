@@ -1,10 +1,9 @@
-/* RDS© — vanilla, tanpa library. */
 (() => {
     'use strict';
 
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* Nav: hairline muncul saat scroll */
+    // nav
     const nav = document.getElementById('nav');
     if (nav) {
         const onScroll = () => nav.classList.toggle('is-scrolled', scrollY > 40);
@@ -12,7 +11,7 @@
         onScroll();
     }
 
-    /* Mobile menu overlay — tutup via tombol, link, atau Escape */
+    // menu mobile
     const toggle  = document.getElementById('nav-toggle');
     const overlay = document.getElementById('nav-overlay');
     if (toggle && overlay) {
@@ -33,7 +32,7 @@
         });
     }
 
-    /* Reveal on scroll — sekali saja per elemen */
+    // reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     if (reduced) {
         revealEls.forEach((el) => el.classList.add('is-visible'));
@@ -53,8 +52,7 @@
         });
     }
 
-    /* Parallax ringan — maksimal 5%, desktop saja.
-       Class .is-parallax memberi scale pada gambar agar tidak ada celah. */
+    // parallax
     const parallaxEls = document.querySelectorAll('[data-parallax]');
     if (!reduced && parallaxEls.length && innerWidth > 768) {
         parallaxEls.forEach((el) => el.classList.add('is-parallax'));

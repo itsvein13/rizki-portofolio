@@ -6,7 +6,6 @@ use CodeIgniter\Exceptions\PageNotFoundException;
 
 class Pages extends BaseController
 {
-    /** @var array<string, array<string, mixed>> */
     private array $projects;
 
     public function __construct()

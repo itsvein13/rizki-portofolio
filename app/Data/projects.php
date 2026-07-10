@@ -1,10 +1,6 @@
 <?php
 
-/**
- * Single source of truth untuk semua project.
- * Edit konten di sini — views tidak perlu disentuh.
- * 'outcome' boleh berupa string (paragraf) atau array (daftar hasil terukur).
- */
+// data project — konten diedit di sini
 
 return [
     'vexa-asteria' => [

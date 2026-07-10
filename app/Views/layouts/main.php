@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        document.documentElement.classList.add('js');
-    </script>
+    <script>document.documentElement.classList.add('js');</script>
 
     <?php
-    $pageTitle       = $title ?? 'Rizki Dwi Setyanto — Creative Developer';
-    $pageDescription = $description ?? 'Creative Developer from Indonesia. Software, design, and brand identity — built with intention.';
+        $pageTitle       = $title ?? 'Rizki Dwi Setyanto — Creative Developer';
+        $pageDescription = $description ?? 'Creative Developer from Indonesia. Software, design, and brand identity — built with intention.';
     ?>
     <title><?= esc($pageTitle) ?></title>
     <meta name="description" content="<?= esc($pageDescription) ?>">
@@ -33,7 +30,6 @@
 
     <link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>">
 </head>
-
 <body>
 
     <a class="skip-link" href="#main">Skip to content</a>
@@ -45,10 +41,3 @@
     <main id="main">
         <?= $this->renderSection('content') ?>
     </main>
-
-    <?= $this->include('components/footer') ?>
-
-    <script src="<?= base_url('assets/js/main.js') ?>" defer></script>
-</body>
-
-</html>

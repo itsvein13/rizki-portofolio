@@ -21,5 +21,5 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction \
 
 ENV CI_ENVIRONMENT=production
 
-# Railway menyuntik $PORT saat runtime — arahkan Apache ke sana
+# railway inject PORT saat runtime
 CMD ["bash", "-c", "sed -i \"s/80/${PORT:-80}/g\" /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf && apache2-foreground"]

@@ -1,8 +1,4 @@
 <?php
-/**
- * @var string $slug
- * @var array  $project  Satu entri dari app/Data/projects.php
- */
 $previewImg = 'assets/img/' . $slug . '/hero.webp';
 ?>
 <a href="<?= base_url('work/' . $slug) ?>" class="work-row reveal">
