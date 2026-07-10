@@ -21,5 +21,5 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction \
 
 ENV CI_ENVIRONMENT=production
 
-# railway inject PORT saat runtime
-CMD ["bash", "-c", "sed -i \"s/80/${PORT:-80}/g\" /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf && apache2-foreground"]
+# fix MPM ganda (bug railway + php-apache), set port, start apache
+CMD ["bash", "-c", "rm -f /etc/apache2/mods-enabled/mpm_event.* /etc/apache2/mods-enabled/mpm_worker.* && a2enmod mpm_prefork 2>/dev/null; sed -i \"s/Listen 80$/Listen ${PORT:-80}/\" /etc/apache2/ports.conf && sed -i \"s/:80>/:${PORT:-80}>/\" /etc/apache2/sites-available/000-default.conf && apache2-foreground"]
