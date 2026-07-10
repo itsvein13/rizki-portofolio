@@ -2,5 +2,8 @@
 
 use CodeIgniter\Router\RouteCollection;
 
-/** @var RouteCollection $routes */
-$routes->get('/', 'Home::index');
+/**
+ * @var RouteCollection $routes
+ */
+$routes->get('/', 'Pages::index');
+$routes->get('work/(:segment)', 'Pages::project/$1');

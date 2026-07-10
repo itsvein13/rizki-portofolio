@@ -1,69 +1,68 @@
-# CodeIgniter 4 Application Starter
+# RDS© Portfolio — Panduan Pemasangan
 
-## What is CodeIgniter?
+Source ini **ditimpakan ke atas project CI4 appstarter** yang sudah kamu buat di `C:\laragon\www\rizki-portfolio`.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## 1. Pasang file
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Salin isi folder ini ke project kamu, timpa file yang sudah ada:
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+| Dari | Ke |
+|---|---|
+| `app/Controllers/Pages.php` | `app/Controllers/` |
+| `app/Config/Routes.php` | `app/Config/` (timpa) |
+| `app/Data/projects.php` | `app/Data/` (buat folder baru) |
+| `app/Views/layouts/`, `components/`, `pages/` | `app/Views/` |
+| `public/assets/` | `public/` |
+| `Dockerfile`, `.dockerignore` | root project |
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Hapus `app/Controllers/Home.php` dan `app/Views/welcome_message.php` bawaan (opsional, tapi rapi).
 
-## Installation & updates
+## 2. Jalankan
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+```bash
+php spark serve
+```
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+- `http://localhost:8080` → homepage
+- `http://localhost:8080/work/voidspend` → contoh case study
 
-## Setup
+## 3. Isi konten kamu (cari tanda [TODO])
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+- `app/Data/projects.php` — cerita & fakta tiap project, link live
+- `app/Views/pages/home.php` — experience rows + link sosial media
+- Gambar project: taruh di `public/assets/img/<slug>/hero.webp`, lalu ganti placeholder di `app/Views/pages/project.php` (petunjuk ada di komentar)
 
-## Important Change with index.php
+## 4. Font (nanti, sebelum production)
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Saat ini font dimuat dari Google Fonts + Fontshare CDN agar langsung jalan.
+Sebelum live: download woff2 (Instrument Serif, Satoshi, JetBrains Mono), taruh di `public/assets/fonts/`, ganti `<link>` di `app/Views/layouts/main.php` dengan `@font-face` di `main.css`. Target: total < 150KB.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## 5. Deploy ke Railway
 
-**Please** read the user guide for a better explanation of how CI4 works!
+1. Push project ke GitHub (pastikan `.env` tidak ikut — sudah ada di `.gitignore` bawaan CI4).
+2. [railway.com](https://railway.com) → New Project → Deploy from GitHub repo.
+3. Railway mendeteksi `Dockerfile` otomatis.
+4. Set environment variables di tab Variables:
+   ```
+   CI_ENVIRONMENT=production
+   app.baseURL=https://<domain-railway-kamu>/
+   ```
+5. Settings → Networking → Generate Domain. Selesai.
+6. Custom domain: tambah CNAME di DNS kamu ke domain Railway.
 
-## Repository Management
+## Struktur
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.2 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+```
+app/
+  Controllers/Pages.php      satu controller, dua method
+  Config/Routes.php          / dan /work/{slug}
+  Data/projects.php          SEMUA konten project di sini
+  Views/
+    layouts/main.php         head, fonts, grain, nav, footer
+    components/              partial reusable
+    pages/home.php           homepage
+    pages/project.php        template case study (dipakai 3 project)
+public/assets/
+  css/main.css               design system penuh, token di :root
+  js/main.js                 nav, menu mobile, reveal, parallax — vanilla
+```
