@@ -20,7 +20,9 @@
     <meta property="og:url" content="<?= current_url() ?>">
     <meta name="twitter:card" content="summary">
 
-    <link rel="icon" href="<?= base_url('favicon.ico') ?>">
+    <link rel="icon" href="<?= base_url('favicon.ico') ?>" sizes="48x48">
+    <link rel="icon" href="<?= base_url('icon-192.png') ?>" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="<?= base_url('apple-touch-icon.png') ?>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

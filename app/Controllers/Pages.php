@@ -17,7 +17,7 @@ class Pages extends BaseController
     {
         return view('pages/home', [
             'projects'    => $this->projects,
-            'title'       => 'Rizki Dwi Setyanto — Creative Developer',
+            'title'       => 'Rizki Dwi S — Creative Developer',
             'description' => 'Creative Developer from Indonesia. Software, design, and brand identity — built with intention.',
         ]);
     }
