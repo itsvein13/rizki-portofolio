@@ -31,14 +31,14 @@
     </header>
 
     <?php
-        $heroImg  = 'assets/img/' . $slug . '/hero.webp';
-        $heroSize = is_file(FCPATH . $heroImg) ? getimagesize(FCPATH . $heroImg) : null;
+    $heroImg  = 'assets/img/' . $slug . '/hero.webp';
+    $heroSize = is_file(FCPATH . $heroImg) ? getimagesize(FCPATH . $heroImg) : null;
     ?>
     <div class="case__hero <?= $heroSize ? 'case__hero--img' : '' ?> reveal">
         <?php if ($heroSize): ?>
             <img src="<?= base_url($heroImg) ?>" alt="<?= esc($project['title']) ?>"
-                 width="<?= $heroSize[0] ?>" height="<?= $heroSize[1] ?>"
-                 loading="eager" fetchpriority="high" decoding="async">
+                width="<?= $heroSize[0] ?>" height="<?= $heroSize[1] ?>"
+                loading="eager" fetchpriority="high" decoding="async">
         <?php else: ?>
             <span class="case__hero-placeholder"><em><?= esc($project['title']) ?></em></span>
         <?php endif ?>
@@ -75,4 +75,12 @@
     </div>
 
     <?php if ($next): ?>
-        <a href="<?= base_url('work/' . $nextSlug) ?>" class="case__next r
+        <a href="<?= base_url('work/' . $nextSlug) ?>" class="case__next reveal">
+            <span class="meta">Next</span>
+            <span class="case__next-title"><?= esc($next['title']) ?> →</span>
+        </a>
+    <?php endif ?>
+
+</article>
+
+<?= $this->endSection() ?>
