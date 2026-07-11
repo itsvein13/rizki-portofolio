@@ -1,6 +1,5 @@
 (() => {
     'use strict';
-
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // nav
