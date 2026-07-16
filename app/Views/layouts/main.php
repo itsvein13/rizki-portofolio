@@ -37,7 +37,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
         <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
     </noscript>
-    <link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>?v=<?= filemtime(FCPATH . 'assets/css/main.css') ?>">
 </head>
 
 <body>
@@ -51,3 +51,10 @@
     <main id="main">
         <?= $this->renderSection('content') ?>
     </main>
+
+    <?= $this->include('components/footer') ?>
+
+    <script src="<?= base_url('assets/js/main.js') ?>?v=<?= filemtime(FCPATH . 'assets/js/main.js') ?>" defer></script>
+</body>
+
+</html>
