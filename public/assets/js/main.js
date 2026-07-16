@@ -70,4 +70,28 @@
         }, { passive: true });
         update();
     }
+
+    // timeline: garis menyala mengikuti scroll
+    const tl = document.querySelector('.timeline');
+    if (tl) {
+        const prog = tl.querySelector('.timeline__progress');
+        const dots = tl.querySelectorAll('.timeline__dot');
+        if (reduced) {
+            prog.style.height = '100%';
+            dots.forEach((d) => d.classList.add('is-lit'));
+        } else {
+            const updTl = () => {
+                const r = tl.getBoundingClientRect();
+                const mid = innerHeight * 0.6;
+                const p = Math.min(1, Math.max(0, (mid - r.top) / r.height));
+                prog.style.height = `${(p * 100).toFixed(2)}%`;
+                dots.forEach((d) => {
+                    const dr = d.getBoundingClientRect();
+                    d.classList.toggle('is-lit', dr.top + dr.height / 2 < mid);
+                });
+            };
+            addEventListener('scroll', updTl, { passive: true });
+            updTl();
+        }
+    }
 })();

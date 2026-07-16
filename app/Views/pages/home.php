@@ -47,20 +47,66 @@
 <section id="experience" class="container section">
     <?= view('components/section-heading', ['num' => '03', 'label' => 'Experience']) ?>
 
-    <div class="exp-row reveal">
-        <span class="meta">2026 — Present</span>
-        <span class="exp-row__role">Independent Creative Developer</span>
-        <span class="meta exp-row__place">Remote</span>
-    </div>
-    <div class="exp-row reveal">
-        <span class="meta">2025 — 2026</span>
-        <span class="exp-row__role">Engineering Administrator — Sinarmasland Plaza Thamrin</span>
-        <span class="meta exp-row__place">Indonesia</span>
-    </div>
-    <div class="exp-row reveal">
-        <span class="meta">2022 — Present</span>
-        <span class="exp-row__role">Founder — Lost Soul Supply</span>
-        <span class="meta exp-row__place">Indonesia</span>
+    <div class="timeline">
+        <span class="timeline__line" aria-hidden="true"><span class="timeline__progress"></span></span>
+
+        <article class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <p class="meta">2026 — Present</p>
+            <h3>Independent Creative Developer</h3>
+            <p class="meta timeline__place">Remote</p>
+            <ul>
+                <li>Designing and building digital products end to end — from brand identity and UI/UX to development and deployment.</li>
+                <li>Shipped VOIDSPEND, a personal finance app focused on effortless tracking, and Vexa Asteria, a Discord bot built for community management.</li>
+                <li>Designed and built this portfolio itself — custom design system, CodeIgniter 4, deployed on its own domain.</li>
+            </ul>
+        </article>
+
+        <article class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <p class="meta">Jan 2025 — May 2026</p>
+            <h3>Engineering Administrator</h3>
+            <p class="meta timeline__place">Sinarmas Land Plaza Thamrin — Jakarta, Indonesia</p>
+            <ul>
+                <li>Supported building system and infrastructure operations, including monitoring and troubleshooting of technical equipment.</li>
+                <li>Managed and processed operational data using SAP.</li>
+                <li>Supported employee administration and operational needs through the GreatDay HR platform.</li>
+                <li>Monitored electricity consumption (KWH) and related systems across several buildings.</li>
+                <li>Managed access control systems (Pro-Watch, E-Dot Win), including access configuration and user management.</li>
+                <li>Supported Building Automation System (BAS) operations to ensure systems run optimally.</li>
+                <li>Monitored and troubleshot CCTV systems (IP &amp; analog).</li>
+                <li>Troubleshot LAN networks to support smooth office operations.</li>
+                <li>Installed, configured, and repaired printers according to operational needs.</li>
+                <li>Installed new devices such as webcams to support meeting and office operational needs.</li>
+                <li>Provided technical support for internal needs (events, meetings, etc.).</li>
+                <li>Handled technical issues during meetings, including configuring HDMI connections to TVs and projectors.</li>
+                <li>Prepared technical reports and operational documentation on a regular basis.</li>
+            </ul>
+        </article>
+
+        <article class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <p class="meta">Dec 2023 — Apr 2024</p>
+            <h3>IT Ops / Monitoring</h3>
+            <p class="meta timeline__place">PT. Bringin Gigantara — Indonesia</p>
+            <ul>
+                <li>Monitored systems and handled incidents on ATM and CRM units (±11,000 units in scale).</li>
+                <li>Performed initial troubleshooting and coordinated with technical teams to resolve issues.</li>
+                <li>Analyzed issue data and system performance using Microsoft Excel.</li>
+                <li>Managed and monitored maintenance tickets to ensure timely resolution.</li>
+                <li>Prepared operational reports and distributed information to related units.</li>
+            </ul>
+        </article>
+
+        <article class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <p class="meta">2022 — Present</p>
+            <h3>Founder</h3>
+            <p class="meta timeline__place">Lost Soul Supply — Indonesia</p>
+            <ul>
+                <li>Built an independent clothing brand from zero — identity, design, production, and marketing.</li>
+            </ul>
+        </article>
     </div>
 </section>
 
