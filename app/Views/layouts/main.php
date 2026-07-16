@@ -18,7 +18,11 @@
     <meta property="og:title" content="<?= esc($pageTitle) ?>">
     <meta property="og:description" content="<?= esc($pageDescription) ?>">
     <meta property="og:url" content="<?= current_url() ?>">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="<?= base_url('og.png') ?>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="<?= base_url('og.png') ?>">
 
     <link rel="icon" href="<?= base_url('favicon.ico') ?>" sizes="48x48">
     <link rel="icon" href="<?= base_url('icon-192.png') ?>" type="image/png" sizes="192x192">

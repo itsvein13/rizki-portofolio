@@ -120,6 +120,7 @@
         <a class="link meta" href="https://github.com/itsvein13" target="_blank" rel="noopener">GitHub ↗</a>
         <a class="link meta" href="https://www.instagram.com/syntaxvg/" target="_blank" rel="noopener">Instagram ↗</a>
         <a class="link meta" href="https://www.linkedin.com/in/rizki-dwi-s-447487289/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="link meta" href="<?= base_url('Rizki-Dwi-Setyanto-CV.pdf') ?>" target="_blank" rel="noopener">Résumé ↗</a>
     </div>
 </section>
 
