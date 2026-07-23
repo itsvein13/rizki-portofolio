@@ -17,7 +17,7 @@
                 <p><?= esc($project['stack']) ?></p>
             </div>
             <div><span class="meta">Year</span>
-                <p><?= esc($project['year']) ?></p>php sp
+                <p><?= esc($project['year']) ?></p>
             </div>
             <div>
                 <span class="meta">Link</span>
