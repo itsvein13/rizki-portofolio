@@ -7,3 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Pages::index');
 $routes->get('work/(:segment)', 'Pages::project/$1');
+$routes->get('sitemap.xml', 'Pages::sitemap');

@@ -39,6 +39,7 @@ return [
         'intent'   => 'Create a finance app where adding an expense takes only a few seconds. Every screen was designed to reduce friction, helping users focus on their financial habits rather than learning the interface.',
         'process'  => 'The experience began with simplifying the expense flow before designing the interface around it. Every layout, interaction, and visual hierarchy was refined to make the app feel clean, intuitive, and distraction-free.',
         'outcome'  => 'Designed as a tool I use daily — proof that consistent financial tracking becomes easier when the experience stays simple and enjoyable.',
+        'gallery'  => ['gallery-2.webp', 'gallery-3.webp', 'gallery-4.webp'],
         'next'     => 'lost-soul-supply',
     ],
 

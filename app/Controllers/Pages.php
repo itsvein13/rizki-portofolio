@@ -40,4 +40,23 @@ class Pages extends BaseController
             'description' => $project['tagline'],
         ]);
     }
+
+    public function sitemap(): \CodeIgniter\HTTP\ResponseInterface
+    {
+        $urls = [base_url()];
+        foreach (array_keys($this->projects) as $slug) {
+            $urls[] = base_url('work/' . $slug);
+        }
+
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+        foreach ($urls as $url) {
+            $xml .= '  <url><loc>' . $url . '</loc></url>' . "\n";
+        }
+        $xml .= '</urlset>';
+
+        return $this->response
+            ->setContentType('application/xml')
+            ->setBody($xml);
+    }
 }

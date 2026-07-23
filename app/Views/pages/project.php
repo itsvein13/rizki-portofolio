@@ -61,6 +61,23 @@
         <p class="reveal"><?= esc($project['process']) ?></p>
     </div>
 
+    <?php if (! empty($project['gallery'])): ?>
+        <div class="case__gallery">
+            <?php foreach ($project['gallery'] as $img): ?>
+                <?php
+                    $imgPath = 'assets/img/' . $slug . '/' . $img;
+                    if (! is_file(FCPATH . $imgPath)) continue;
+                    $size = getimagesize(FCPATH . $imgPath);
+                ?>
+                <figure class="reveal">
+                    <img src="<?= base_url($imgPath) ?>" alt="<?= esc($project['title']) ?> — detail"
+                         width="<?= $size[0] ?>" height="<?= $size[1] ?>"
+                         loading="lazy" decoding="async">
+                </figure>
+            <?php endforeach ?>
+        </div>
+    <?php endif ?>
+
     <div class="case__section">
         <span class="meta case__label reveal">Outcome</span>
         <?php if (is_array($project['outcome'])): ?>

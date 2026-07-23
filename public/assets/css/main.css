@@ -569,3 +569,20 @@ h1, h2, .approach__statement, .case__tagline { text-wrap: balance; }
     .timeline { padding-left: 32px; }
     .timeline__dot { left: -27px; }
 }
+
+/* case gallery */
+
+.case__gallery {
+    display: grid;
+    gap: var(--space-4);
+    margin-block: var(--space-5) var(--space-6);
+}
+.case__gallery figure {
+    border: 1px solid var(--ink-700);
+    overflow: hidden;
+}
+.case__gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
