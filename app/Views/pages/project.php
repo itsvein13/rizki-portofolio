@@ -47,23 +47,23 @@
     <p class="case__intro reveal"><?= esc($project['intro']) ?></p>
 
     <div class="case__section">
-        <span class="meta case__label reveal">Problem</span>
+        <h2 class="meta case__label reveal">Problem</h2>
         <p class="reveal"><?= esc($project['problem']) ?></p>
     </div>
 
     <div class="case__section">
-        <span class="meta case__label reveal">Intent</span>
+        <h2 class="meta case__label reveal">Intent</h2>
         <p class="reveal"><?= esc($project['intent']) ?></p>
     </div>
 
     <div class="case__section">
-        <span class="meta case__label reveal">Process</span>
+        <h2 class="meta case__label reveal">Process</h2>
         <p class="reveal"><?= esc($project['process']) ?></p>
     </div>
 
     <?php if (! empty($project['features'])): ?>
         <div class="case__section">
-            <span class="meta case__label reveal">Key features</span>
+            <h2 class="meta case__label reveal">Key features</h2>
             <ul class="case__outcomes">
                 <?php foreach ($project['features'] as $item): ?>
                     <li class="reveal"><?= esc($item) ?></li>
@@ -90,7 +90,7 @@
     <?php endif ?>
 
     <div class="case__section">
-        <span class="meta case__label reveal">Outcome</span>
+        <h2 class="meta case__label reveal">Outcome</h2>
         <?php if (is_array($project['outcome'])): ?>
             <ul class="case__outcomes">
                 <?php foreach ($project['outcome'] as $item): ?>

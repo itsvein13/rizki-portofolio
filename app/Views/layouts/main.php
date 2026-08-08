@@ -12,17 +12,19 @@
     <title><?= esc($pageTitle) ?></title>
     <meta name="description" content="<?= esc($pageDescription) ?>">
     <meta name="theme-color" content="#121417">
+    <link rel="canonical" href="<?= current_url() ?>">
 
+    <?php $shareImage = $ogImage ?? base_url('og.png'); ?>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Rizki Dwi Setyanto">
     <meta property="og:title" content="<?= esc($pageTitle) ?>">
     <meta property="og:description" content="<?= esc($pageDescription) ?>">
     <meta property="og:url" content="<?= current_url() ?>">
-    <meta property="og:image" content="<?= base_url('og.png') ?>">
+    <meta property="og:image" content="<?= esc($shareImage, 'attr') ?>">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="<?= base_url('og.png') ?>">
+    <meta name="twitter:image" content="<?= esc($shareImage, 'attr') ?>">
 
     <link rel="icon" href="<?= base_url('favicon.ico') ?>" sizes="48x48">
     <link rel="icon" href="<?= base_url('icon-192.png') ?>" type="image/png" sizes="192x192">

@@ -5,10 +5,11 @@
 <header class="hero container">
     <div class="hero__atmosphere" aria-hidden="true"></div>
     <div class="hero__grid" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="hero__bgword" aria-hidden="true"><span>Code</span><span>Design</span><span>Create</span></div>
 
     <p class="meta hero__label mask"><span class="reveal">Software Developer — Indonesia</span></p>
     <h1 data-hero-parallax="1"><span class="mask"><span class="reveal">Code.</span></span> <span class="mask"><span class="reveal">Design.</span></span> <span class="mask"><span class="reveal"><em>Create</em>.</span></span></h1>
-    <p class="hero__sub mask" data-hero-parallax="0.6"><span class="reveal">I'm Rizki, a creative developer from Indonesia passionate about building modern software, intuitive interfaces, and meaningful digital experiences.</span></p>
+    <p class="hero__sub mask" data-hero-parallax="0.6"><span class="reveal">I'm Rizki, a developer from Indonesia. I build full-stack software — multi-tenant platforms, APIs, and the interfaces on top of them.</span></p>
     <p class="meta hero__scroll mask"><span class="reveal">Scroll ↓</span></p>
 </header>
 
@@ -24,7 +25,7 @@
             <img src="<?= base_url('assets/img/profile-hero.webp') ?>" alt="Rizki Dwi Setyanto" width="910" height="1142" loading="lazy" decoding="async">
         </div>
 
-        <p class="about__desc reveal">I'm Rizki Dwi Setyanto, a software developer based in Indonesia. My work sits between software development, interface design, and product thinking — from building web applications to shaping the experiences around them. I enjoy turning ideas into things that are functional, considered, and genuinely useful.</p>
+        <p class="about__desc reveal">I'm Rizki Dwi Setyanto, a software developer based in Indonesia. Most of what I build is full-stack — APIs, databases, and the architecture behind them — plus the interfaces and identity on top. That same instinct built Lost Soul Supply, and this site.</p>
     </div>
 </section>
 
@@ -53,9 +54,42 @@
         <p class="approach__statement reveal">Good software solves problems. Great software creates <em>experiences</em>.</p>
 
         <div class="approach__body">
-            <p class="reveal">I build digital products that combine clean code, thoughtful design, and practical solutions. Every project is an opportunity to create something functional, intuitive, and visually engaging.</p>
-            <p class="reveal">With a background in Information Systems, I work across software development, networking, and creative design. I enjoy learning new technologies and turning ideas into meaningful digital experiences.</p>
-            <p class="meta approach__stack reveal">JavaScript · Node.js · React · PHP · Networking · UI/UX</p>
+            <p class="reveal">I build digital products end to end — clean code, considered design, and decisions that hold up once real users touch them.</p>
+            <p class="reveal">Background in Information Systems, working across software development, networking, and brand design. I like projects that force all three to work together.</p>
+
+            <div class="stack reveal">
+                <div class="stack__group">
+                    <span class="meta stack__group-label">Core development</span>
+                    <div class="stack__grid">
+                        <div class="stack__item"><span class="stack__mark">JS</span><span class="stack__name">JavaScript</span></div>
+                        <div class="stack__item"><span class="stack__mark">PHP</span><span class="stack__name">PHP</span></div>
+                        <div class="stack__item"><span class="stack__mark">CI4</span><span class="stack__name">CodeIgniter</span></div>
+                        <div class="stack__item"><span class="stack__mark">RN</span><span class="stack__name">React Native</span></div>
+                        <div class="stack__item"><span class="stack__mark">Node</span><span class="stack__name">Node.js</span></div>
+                        <div class="stack__item"><span class="stack__mark">SQL</span><span class="stack__name">MySQL</span></div>
+                    </div>
+                </div>
+
+                <div class="stack__group">
+                    <span class="meta stack__group-label">Tools &amp; design</span>
+                    <div class="stack__grid">
+                        <div class="stack__item"><span class="stack__mark">Git</span><span class="stack__name">Git</span></div>
+                        <div class="stack__item"><span class="stack__mark">GH</span><span class="stack__name">GitHub</span></div>
+                        <div class="stack__item"><span class="stack__mark">Fg</span><span class="stack__name">Figma</span></div>
+                        <div class="stack__item"><span class="stack__mark">Ps</span><span class="stack__name">Photoshop</span></div>
+                        <div class="stack__item"><span class="stack__mark">Ae</span><span class="stack__name">After Effects</span></div>
+                    </div>
+                </div>
+
+                <div class="stack__group">
+                    <span class="meta stack__group-label">Currently exploring</span>
+                    <div class="stack__explore">
+                        <span>Networking</span>
+                        <span>Cisco</span>
+                        <span>MikroTik</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -103,7 +137,7 @@
         <article class="timeline__item reveal">
             <span class="timeline__dot" aria-hidden="true"></span>
             <p class="meta">Dec 2023 — Apr 2024</p>
-            <h3>IT Ops / Monitoring</h3>
+            <h3>Data Administrator</h3>
             <p class="meta timeline__place">PT. Bringin Gigantara — Indonesia</p>
             <ul>
                 <li>Monitored systems and handled incidents on ATM and CRM units (±11,000 units in scale).</li>
@@ -135,7 +169,7 @@
     <div class="contact__socials reveal">
         <a class="link meta" href="https://github.com/itsvein13" target="_blank" rel="noopener">GitHub ↗</a>
         <a class="link meta" href="https://www.instagram.com/syntaxvg/" target="_blank" rel="noopener">Instagram ↗</a>
-        <a class="link meta" href="https://www.linkedin.com/in/rizki-dwi-s-447487289/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="link meta" href="https://www.linkedin.com/in/rizkidwisetyanto/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a class="link meta" href="<?= base_url('Rizki-Dwi-Setyanto-Resume.pdf') ?>" target="_blank" rel="noopener">Résumé ↗</a>
     </div>
 </section>

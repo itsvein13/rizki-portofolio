@@ -17,7 +17,7 @@ class Pages extends BaseController
     {
         return view('pages/home', [
             'projects'    => $this->projects,
-            'title'       => 'Rizki Dwi S — Creative Developer',
+            'title'       => 'Rizki Dwi Setyanto — Creative Developer',
             'description' => 'Creative Developer from Indonesia. Software, design, and brand identity — built with intention.',
         ]);
     }
@@ -30,6 +30,7 @@ class Pages extends BaseController
 
         $project = $this->projects[$slug];
         $next    = $this->projects[$project['next']] ?? null;
+        $heroImg = 'assets/img/' . $slug . '/hero.webp';
 
         return view('pages/project', [
             'project'     => $project,
@@ -38,6 +39,7 @@ class Pages extends BaseController
             'next'        => $next,
             'title'       => $project['title'] . ' — Rizki Dwi Setyanto',
             'description' => $project['tagline'],
+            'ogImage'     => is_file(FCPATH . $heroImg) ? base_url($heroImg) : base_url('og.png'),
         ]);
     }
 
