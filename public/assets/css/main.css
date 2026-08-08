@@ -257,6 +257,9 @@ img { max-width: 100%; height: auto; display: block; }
 .work-row:hover .work-row__cat { transform: translateX(-4px); }
 .work-row:hover .work-row__year { transform: translateX(4px); }
 
+.work-row--featured { padding-block: calc(var(--space-3) + 8px); }
+.work-row--featured .work-row__title { font-size: clamp(27px, 3.6vw, 38px); }
+
 .work-row__preview {
     position: absolute; right: 300px; top: 50%;
     width: 240px; aspect-ratio: 4 / 3;

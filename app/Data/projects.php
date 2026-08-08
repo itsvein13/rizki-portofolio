@@ -3,8 +3,36 @@
 // data project — konten diedit di sini
 
 return [
-    'vexa-asteria' => [
+    'ember' => [
         'num'      => 'W-001',
+        'featured' => true,
+        'title'    => 'EMBER',
+        'category' => 'Multi-Tenant SaaS Platform',
+        'year'     => '2026',
+        'role'     => 'Product Design & Development',
+        'stack'    => 'Next.js · TypeScript · PostgreSQL',
+        'link'     => null,
+        'tagline'  => 'One platform running many restaurants, each certain it\'s the only one in the building.',
+        'intro'    => 'EMBER is a multi-tenant SaaS platform for restaurants and coffee shops. One deployment serves many tenants — each with its own branded ordering page, QR menu, QRIS payment, counter screen, and owner dashboard — without any tenant ever seeing another\'s data. Ember Coffee & Kitchen, shown here, is the tenant it was built for.',
+        'problem'  => 'Most restaurant ordering tools force a choice: build a one-off site per client, which does not scale past a handful of restaurants, or put everyone on a shared marketplace, which turns a restaurant\'s identity into a listing next to its competitors. Neither treats a restaurant\'s menu, orders, and customers as fully its own.',
+        'intent'   => 'Build one platform that can host many restaurants without any of them feeling hosted — its own branded page, its own staff roles, its own payment account — with isolation enforced by the database itself, not just by application code remembering to filter correctly.',
+        'process'  => 'The product is split into four surfaces that share no context: a public ordering page for diners, a counter screen for staff, a dashboard for owners, and an admin panel for the platform itself. Business rules live in pure, tested modules with no database access of their own, so an order-state transition or an analytics period can be checked without loading a page. Tenant isolation runs on two independent layers — a query layer that refuses to run without a tenant id, and Postgres row-level security underneath it — so a mistake in one does not become a leak.',
+        'features' => [
+            'QR ordering at the table — a diner scans, browses, and pays without ever creating an account',
+            'Four tenant roles (Owner, Manager, Cashier, Kitchen) plus a fully separate platform-admin role with no access into any tenant\'s data',
+            'Per-tenant QRIS payment via each restaurant\'s own Midtrans account, so the platform never holds a diner\'s money',
+            'A live counter queue for staff and an owner dashboard with analytics and CSV export',
+        ],
+        'outcome'  => [
+            'All four surfaces run end to end against a real Postgres database, with row-level security enforced, not just assumed',
+            '838 automated tests across 56 files, including tests that read the schema itself and fail the build if a new tenant table ships without an isolation policy',
+            'Payment handling — signature verification, idempotent webhook updates, malformed-input recovery — is complete; a production Midtrans account and a real deployment are what stand between this and its first paying diner',
+        ],
+        'next'     => 'vexa-asteria',
+    ],
+
+    'vexa-asteria' => [
+        'num'      => 'W-002',
         'title'    => 'Vexa Asteria',
         'category' => 'Discord Automation Bot',
         'year'     => '2026',
@@ -26,7 +54,7 @@ return [
     ],
 
     'voidspend' => [
-        'num'      => 'W-002',
+        'num'      => 'W-003',
         'title'    => 'VOIDSPEND',
         'category' => 'Personal Finance Platform',
         'year'     => '2025',
@@ -44,7 +72,7 @@ return [
     ],
 
     'lost-soul-supply' => [
-        'num'      => 'W-003',
+        'num'      => 'W-004',
         'title'    => 'Lost Soul Supply',
         'category' => 'Fashion Brand Identity',
         'year'     => '2022 — Present',
@@ -57,6 +85,6 @@ return [
         'intent'   => 'Build a brand with a distinct emotional identity — melancholic yet hopeful — expressed through restrained typography, monochrome palettes, and timeless compositions.',
         'process'  => 'Every collection begins with an idea, not a graphic. Words shape the narrative first, then typography, composition, and garment placement follow. The same design principles I use in software — clarity, hierarchy, and restraint — also define every piece.',
         'outcome'  => 'More than a clothing brand, Lost Soul Supply became a personal design laboratory — shaping how I think about branding, visual systems, and creating products with a clear identity.',
-        'next'     => 'vexa-asteria',
+        'next'     => 'ember',
     ],
 ];

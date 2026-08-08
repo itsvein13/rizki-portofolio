@@ -1,7 +1,8 @@
 <?php
 $previewImg = 'assets/img/' . $slug . '/hero.webp';
+$featured   = ! empty($project['featured']);
 ?>
-<a href="<?= base_url('work/' . $slug) ?>" class="work-row reveal">
+<a href="<?= base_url('work/' . $slug) ?>" class="work-row reveal<?= $featured ? ' work-row--featured' : '' ?>">
     <span class="work-row__num"><?= esc($project['num']) ?></span>
     <span class="work-row__title"><?= esc($project['title']) ?></span>
     <span class="work-row__cat"><?= esc($project['category']) ?></span>

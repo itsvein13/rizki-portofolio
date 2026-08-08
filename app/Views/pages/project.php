@@ -61,6 +61,17 @@
         <p class="reveal"><?= esc($project['process']) ?></p>
     </div>
 
+    <?php if (! empty($project['features'])): ?>
+        <div class="case__section">
+            <span class="meta case__label reveal">Key features</span>
+            <ul class="case__outcomes">
+                <?php foreach ($project['features'] as $item): ?>
+                    <li class="reveal"><?= esc($item) ?></li>
+                <?php endforeach ?>
+            </ul>
+        </div>
+    <?php endif ?>
+
     <?php if (! empty($project['gallery'])): ?>
         <div class="case__gallery">
             <?php foreach ($project['gallery'] as $img): ?>
