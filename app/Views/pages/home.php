@@ -6,17 +6,33 @@
     <div class="hero__atmosphere" aria-hidden="true"></div>
     <div class="hero__grid" aria-hidden="true"><span></span><span></span><span></span></div>
 
-    <p class="meta hero__label reveal">Creative Developer — Indonesia</p>
-    <h1 class="reveal">Code. Design. <em>Create</em>.</h1>
-    <p class="hero__sub reveal">I'm Rizki, a creative developer from Indonesia passionate about building modern software, intuitive interfaces, and meaningful digital experiences.</p>
-    <p class="meta hero__scroll reveal">Scroll ↓</p>
+    <p class="meta hero__label mask"><span class="reveal">Software Developer — Indonesia</span></p>
+    <h1 data-hero-parallax="1"><span class="mask"><span class="reveal">Code.</span></span> <span class="mask"><span class="reveal">Design.</span></span> <span class="mask"><span class="reveal"><em>Create</em>.</span></span></h1>
+    <p class="hero__sub mask" data-hero-parallax="0.6"><span class="reveal">I'm Rizki, a creative developer from Indonesia passionate about building modern software, intuitive interfaces, and meaningful digital experiences.</span></p>
+    <p class="meta hero__scroll mask"><span class="reveal">Scroll ↓</span></p>
 </header>
+
+<section id="about" class="container section about">
+    <div class="section-head about__head">
+        <span class="section-head__ghost" aria-hidden="true">01</span>
+        <span class="meta reveal">01</span>
+        <h2 class="about__heading mask"><span class="reveal">A little about who I am.</span></h2>
+    </div>
+
+    <div class="about__body">
+        <div class="about__portrait" data-parallax-subtle>
+            <img src="<?= base_url('assets/img/profile-hero.webp') ?>" alt="Rizki Dwi Setyanto" width="910" height="1142" loading="lazy" decoding="async">
+        </div>
+
+        <p class="about__desc reveal">I'm Rizki Dwi Setyanto, a software developer based in Indonesia. My work sits between software development, interface design, and product thinking — from building web applications to shaping the experiences around them. I enjoy turning ideas into things that are functional, considered, and genuinely useful.</p>
+    </div>
+</section>
 
 <section id="works" class="container section">
     <?= view(
         'components/section-heading',
         [
-            'num'   => '01',
+            'num'   => '02',
             'label' => 'Selected works',
             'count' => '(' . str_pad((string) count($projects), 2, '0', STR_PAD_LEFT) . ')',
         ],
@@ -31,7 +47,7 @@
 </section>
 
 <section id="approach" class="container section">
-    <?= view('components/section-heading', ['num' => '02', 'label' => 'Approach']) ?>
+    <?= view('components/section-heading', ['num' => '03', 'label' => 'Approach']) ?>
 
     <div class="approach">
         <p class="approach__statement reveal">Good software solves problems. Great software creates <em>experiences</em>.</p>
@@ -45,7 +61,7 @@
 </section>
 
 <section id="experience" class="container section">
-    <?= view('components/section-heading', ['num' => '03', 'label' => 'Experience']) ?>
+    <?= view('components/section-heading', ['num' => '04', 'label' => 'Experience']) ?>
 
     <div class="timeline">
         <span class="timeline__line" aria-hidden="true"><span class="timeline__progress"></span></span>
@@ -111,7 +127,7 @@
 </section>
 
 <section id="contact" class="container section">
-    <?= view('components/section-heading', ['num' => '04', 'label' => 'Contact']) ?>
+    <?= view('components/section-heading', ['num' => '05', 'label' => 'Contact']) ?>
 
     <p class="meta reveal">Open for work, collaboration, or a good conversation.</p>
     <a class="contact__email reveal" href="mailto:dsikiiw@gmail.com">dsikiiw@gmail.com</a>
