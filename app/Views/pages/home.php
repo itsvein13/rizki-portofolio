@@ -25,7 +25,8 @@
             <img src="<?= base_url('assets/img/profile-hero.webp') ?>" alt="Rizki Dwi Setyanto" width="910" height="1142" loading="lazy" decoding="async">
         </div>
 
-        <p class="about__desc reveal">I'm Rizki Dwi Setyanto, a software developer based in Indonesia. Most of what I build is full-stack — APIs, databases, and the architecture behind them — plus the interfaces and identity on top. That same instinct built Lost Soul Supply, and this site.</p>
+        <p class="about__desc reveal">I'm Rizki, a developer from Indonesia. I build full-stack software, from APIs and backend systems to the interfaces people actually use. I enjoy building things from the ground up, especially products that solve real problems.
+        </p>
     </div>
 </section>
 
@@ -77,7 +78,7 @@
                         <div class="stack__item"><span class="stack__mark">GH</span><span class="stack__name">GitHub</span></div>
                         <div class="stack__item"><span class="stack__mark">Fg</span><span class="stack__name">Figma</span></div>
                         <div class="stack__item"><span class="stack__mark">Ps</span><span class="stack__name">Photoshop</span></div>
-                        <div class="stack__item"><span class="stack__mark">Ae</span><span class="stack__name">After Effects</span></div>
+                        <div class="stack__item"><span class="stack__mark">CC</span><span class="stack__name">Capcut</span></div>
                     </div>
                 </div>
 
